@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
+:root {
+	--red: #df5656;
+	--midGrey: #7d828f;
+	--darkGrey: #60636d;
+	--darkBlue: #1b1d23;
+	--veryLightGrey: #eeeff4;
+	--lightGrey: #c8ccd8;
+	--maxWidth: 1110px;
+	--maxWidthTablet: 525px;
+	--tablet: 1050px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "League Spartan";
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+	overflow-x: hidden;
+}
+
+h1 {
+	font-size: 15.625rem;
+	font-family: "League Spartan";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 200px;
+	letter-spacing: -0.1875rem;
+	text-decoration: none;
+	text-transform: none;
+
+	@media (max-width: 1050px) {
+		font-size: 8.9rem;
+		line-height: 12.5rem;
+	}
+
+	@media (max-width: 573px) {
+		font-size: 6.25rem;
+		line-height: 8.75rem;
+	}
+}
+
+h2 {
+	font-size: 4.5rem;
+	font-family: "League Spartan";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 80px;
+	letter-spacing: -2px;
+	text-decoration: none;
+	text-transform: none;
+
+	@media (max-width: 573px) {
+		font-size: 3rem;
+		line-height: 64px;
+	}
+}
+
+h3 {
+	font-size: 4.5rem;
+	font-family: "League Spartan";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 64px;
+	letter-spacing: -2px;
+	text-decoration: none;
+	text-transform: none;
+}
+
+h4 {
+	font-size: 2rem;
+	font-family: "League Spartan";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 40px;
+	text-decoration: none;
+	text-transform: none;
+}
+
+h5 {
+	color: #60636d;
+	font-family: League Spartan;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 35px; /* 194.444% */
+}
+
+p {
+	font-size: 1.125rem;
+	font-family: "League Spartan";
+	font-weight: 500;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+	line-height: 1.5rem;
+	color: var(--darkGrey);
+}
+
+.NavDeco {
+	font-size: 1.125rem;
+	font-family: "League Spartan";
+	font-weight: 500;
+	font-style: normal;
+	line-height: 24px;
+	letter-spacing: 18px;
+	text-decoration: none;
+	text-transform: none;
+	color: var(--lightGrey);
+	writing-mode: vertical-rl;
+}
+
+.NavLine {
+	width: 1px;
+	height: 104px;
+	background-color: var(--lightGrey);
+}
+
+.NavLink {
+	font-size: 1.125rem;
+	font-family: "League Spartan";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 25px;
+	text-decoration: none;
+	text-transform: none;
+	color: var(--midGrey);
+
+	&:hover {
+		color: var(--darkBlue);
+	}
+}
+
+button,
+.button {
+	border: none;
+
+	font-family: League Spartan;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 700;
+
+	background-color: var(--darkBlue);
+	color: white;
+	padding: 1.5rem 2.3rem;
+
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	cursor: pointer;
+	width: fit-content;
+	text-decoration: none;
+
+	&:hover {
+		background-color: var(--darkGrey);
+	}
+}
+
+button.link {
+	background-color: white;
+	color: var(--darkBlue);
+	position: relative;
+
+	&:after {
+		position: absolute;
+		bottom: 0.5rem;
+		content: "";
+		width: 152px;
+		height: 1px;
+		background-color: var(--darkBlue);
+		opacity: 0;
+	}
+
+	&:hover {
+		background-color: transparent;
+		&:after {
+			opacity: 1;
+		}
+	}
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 13rem;
+	width: 100vw;
+
+	@media (max-width: 573px) {
+		gap: 4rem;
+	}
+}
+
+section.paramour {
+	background-image: url("$lib/assets/home/desktop/image-hero-paramour.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/home/tablet/image-hero-paramour.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/home/mobile/image-hero-paramour.jpg");
+	}
+}
+
+section.seraph {
+	background-image: url("$lib/assets/home/desktop/image-hero-seraph.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/home/tablet/image-hero-seraph.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/home/mobile/image-hero-seraph.jpg");
+	}
+}
+
+section.federal {
+	background-image: url("$lib/assets/home/desktop/image-hero-federal.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/home/tablet/image-hero-federal.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/home/mobile/image-hero-federal.jpg");
+	}
+}
+
+section.trinity {
+	background-image: url("$lib/assets/home/desktop/image-hero-trinity.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/home/tablet/image-hero-trinity.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/home/mobile/image-hero-trinity.jpg");
+	}
+}
+
+/* portfolio */
+
+div.twotwoeight {
+	background-image: url("$lib/assets/portfolio/desktop/image-228b.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-228b.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-228b.jpg");
+	}
+}
+
+div.del-sol {
+	background-image: url("$lib/assets/portfolio/desktop/image-del-sol.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-del-sol.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-del-sol.jpg");
+	}
+}
+
+div.edelweiss {
+	background-image: url("$lib/assets/portfolio/desktop/image-edelweiss.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-edelweiss.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-edelweiss.jpg");
+	}
+}
+
+div.eebox {
+	background-image: url("$lib/assets/portfolio/desktop/image-eebox.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-eebox.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-eebox.jpg");
+	}
+}
+
+div.federal {
+	background-image: url("$lib/assets/portfolio/desktop/image-federal.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-federal.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-federal.jpg");
+	}
+}
+
+div.hypers {
+	background-image: url("$lib/assets/portfolio/desktop/image-hypers.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-hypers.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-hypers.jpg");
+	}
+}
+
+div.netcry {
+	background-image: url("$lib/assets/portfolio/desktop/image-netcry.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-netcry.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-netcry.jpg");
+	}
+}
+
+div.paramour {
+	background-image: url("$lib/assets/portfolio/desktop/image-paramour.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-paramour.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-paramour.jpg");
+	}
+}
+
+div.prototype {
+	background-image: url("$lib/assets/portfolio/desktop/image-prototype.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-prototype.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-prototype.jpg");
+	}
+}
+
+div.seraph {
+	background-image: url("$lib/assets/portfolio/desktop/image-seraph.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-seraph.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-seraph.jpg");
+	}
+}
+
+div.sxiv {
+	background-image: url("$lib/assets/portfolio/desktop/image-sxiv.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-sxiv.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-sxiv.jpg");
+	}
+}
+
+div.trinity {
+	background-image: url("$lib/assets/portfolio/desktop/image-trinity.jpg");
+
+	@media (max-width: 1050px) {
+		background-image: url("$lib/assets/portfolio/tablet/image-trinity.jpg");
+	}
+
+	@media (max-width: 573px) {
+		background-image: url("$lib/assets/portfolio/mobile/image-trinity.jpg");
+	}
+}
