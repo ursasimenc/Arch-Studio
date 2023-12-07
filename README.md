@@ -1,38 +1,30 @@
-# create-svelte
+# Frontend Mentor - Arch Studio multi-page website solution
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a solution to the [Arch Studio multi-page website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/arch-studio-multipage-website-wNIbOFYR6).
 
-## Creating a project
+## Table of contents
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [The challenge](#the-challenge)
+- [Built with](#built-with)
+- [Screenshot](#screenshot)
+- [Links](#links)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+# The challenge
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Users should be able to:
 
-## Developing
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements throughout the site
+- Receive an error message when the contact form is submitted if:
+  - The `Name`, `Email` or `Message` fields are empty should show "Can't be empty"
+  - The `Email` is not formatted correctly should show "Please use a valid email address"
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+# Links
 
-```bash
-npm run dev
+- [Repo](https://github.com/ursasimenc/Arch-Studio)
+- [Demo](https://us-coffeeroasters.netlify.app)
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+# Built with
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- [SvelteKit](https://kit.svelte.dev/)
+- [TypeScript](https://www.typescriptlang.org/) - JS superset

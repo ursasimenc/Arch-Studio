@@ -5,9 +5,11 @@
 	let emailInvalid = false;
 	let messageInvalid = false;
 	let showMessage = false;
+	$: emailMessage = "Can't be empty";
 
 	function checkForm(e: any) {
 		e.preventDefault();
+		emailMessage = "Can't be empty";
 
 		const name = e.target[0].value;
 		const email = e.target[1].value;
@@ -15,12 +17,16 @@
 
 		name === "" ? (nameInvalid = true) : (nameInvalid = false);
 		message === "" ? (messageInvalid = true) : (messageInvalid = false);
+		email === "" ? (emailInvalid = true) : (emailInvalid = false);
 
 		if (email.includes("@") && email.includes(".")) {
 			emailInvalid = false;
 		} else {
+			emailMessage = "Please use a valid email address";
 			emailInvalid = true;
 		}
+
+		console.log(e.target);
 
 		if (!nameInvalid && !emailInvalid && !messageInvalid) {
 			showMessage = true;
@@ -80,16 +86,16 @@
 		</div>
 	</section>
 	<section id="map"></section>
-	<section id="form" on:submit="{(e) => checkForm(e)}">
+	<section id="form">
 		<h2>Connect with us</h2>
-		<form class="content">
+		<form class="content" novalidate on:submit="{(e) => checkForm(e)}">
 			<label for="name" aria-label="Name">
-				<input class="{nameInvalid ? 'invalid' : ''}" type="text" name="Name" id="name" placeholder="Name" autocomplete="{'true'}" />
+				<input class="{nameInvalid ? 'invalid' : ''}" type="text" name="Name" id="name" placeholder="Name" />
 				<div class="error">Can't be empty</div></label
 			>
 			<label for="email" aria-label="Email">
-				<input class="{emailInvalid ? 'invalid' : ''}" type="email" name="email" id="email" placeholder="Email" autocomplete="{'true'}" />
-				<div class="error">Can't be empty</div></label
+				<input class="{emailInvalid ? 'invalid' : ''}" type="email" name="email" id="email" placeholder="Email" />
+				<div class="error" id="email-error">{emailMessage}</div></label
 			>
 			<label for="message" aria-label="Message">
 				<textarea class="{messageInvalid ? 'invalid' : ''}" name="message" id="message" placeholder="Message" cols="30" rows="6"></textarea>
@@ -383,8 +389,6 @@
 					box-shadow: 0px 4px 0px -1px var(--darkBlue);
 				}
 
-				&:invalid,
-				&:focus:invalid,
 				&.invalid {
 					box-shadow: 0px 2px 0px -1px var(--red);
 					margin-bottom: 0;
