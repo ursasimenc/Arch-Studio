@@ -22,7 +22,7 @@ Users should be able to:
 # Links
 
 - [Repo](https://github.com/ursasimenc/Arch-Studio)
-- [Demo](https://us-coffeeroasters.netlify.app)
+- [Demo](archstudio-us.netlify.app)
 
 # Built with
 
