@@ -2,6 +2,10 @@
 	import ProjectCard from "$lib/components/ProjectCard/ProjectCard.svelte";
 </script>
 
+<svelte:head>
+	<title>Portfolio</title>
+</svelte:head>
+
 <main>
 	<div>
 		<ProjectCard classes="seraph" title="Seraph Station" desc="September 2019" number="" />

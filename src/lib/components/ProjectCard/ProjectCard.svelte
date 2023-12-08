@@ -11,7 +11,7 @@
 			<div class="number">{number}</div>
 		{/if}
 		<div class="content">
-			<h4>{title}</h4>
+			<h3>{title}</h3>
 			{#if number === ""}
 				<p>{desc}</p>
 			{:else}
@@ -56,7 +56,7 @@
 			background: rgba(211, 211, 211, 0.5);
 		}
 
-		& h4,
+		& h3,
 		a,
 		p {
 			margin: 0;

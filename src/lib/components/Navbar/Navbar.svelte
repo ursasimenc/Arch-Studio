@@ -23,8 +23,9 @@
 		<div class="NavDeco">{decoString}</div>
 	</div>
 	<nav>
-		<div id="logo">
-			<a href="/">
+		<div class="logo">
+			<a href="/"
+				><span>Arch</span>
 				<svg xmlns="http://www.w3.org/2000/svg" width="97" height="40"
 					><path
 						fill="#1B1D23"
@@ -141,10 +142,16 @@
 			}
 		}
 
-		& #logo {
+		& .logo {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			position: relative;
+
+			& span {
+				visibility: hidden;
+				position: absolute;
+			}
 
 			@media (max-width: 573px) {
 				width: 100%;

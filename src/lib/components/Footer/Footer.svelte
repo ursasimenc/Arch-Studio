@@ -1,7 +1,8 @@
 <footer>
 	<div class="logo-wrapper">
-		<div id="logo">
+		<div class="logo">
 			<a href="/">
+				<span>Arch</span>
 				<svg xmlns="http://www.w3.org/2000/svg" width="97" height="40"
 					><path
 						fill="white"
@@ -55,13 +56,19 @@
 			background: linear-gradient(0deg, var(--veryLightGrey) 50%, white 50%);
 		}
 
-		& #logo {
+		& .logo {
 			height: 12.5rem;
 			aspect-ratio: 1;
 			background-color: var(--darkBlue);
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			position: relative;
+
+			& span {
+				visibility: hidden;
+				position: absolute;
+			}
 
 			@media (max-width: 1050px) {
 				height: 9rem;

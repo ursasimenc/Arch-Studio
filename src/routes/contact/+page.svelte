@@ -34,6 +34,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Contact</title>
+</svelte:head>
+
 <main>
 	<section id="contact">
 		<img src="{contactImg}" alt="A telephone" width="635px" height="720px" />

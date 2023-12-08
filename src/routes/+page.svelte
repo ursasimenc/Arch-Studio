@@ -4,6 +4,10 @@
 	import ProjectCard from "$lib/components/ProjectCard/ProjectCard.svelte";
 </script>
 
+<svelte:head>
+	<title>Arch Studio</title>
+</svelte:head>
+
 <main>
 	<Carousel />
 	<section id="welcome">

@@ -4,6 +4,10 @@
 	import Leader from "$lib/components/Leader/Leader.svelte";
 </script>
 
+<svelte:head>
+	<title>About Us</title>
+</svelte:head>
+
 <main>
 	<section id="about">
 		<img src="{aboutImg}" alt="A person making designs using a laptop" width="635px" height="720px" />

@@ -49,10 +49,10 @@
 		</a>
 	</div>
 	<div class="controls">
-		<button id="{currentProject == 0 ? 'active' : ''}" on:click="{() => (currentProject = 0)}">01</button>
-		<button id="{currentProject == 1 ? 'active' : ''}" on:click="{() => (currentProject = 1)}">02</button>
-		<button id="{currentProject == 2 ? 'active' : ''}" on:click="{() => (currentProject = 2)}">03</button>
-		<button id="{currentProject == 3 ? 'active' : ''}" on:click="{() => (currentProject = 3)}">04</button>
+		<button class="{currentProject == 0 ? 'active' : 'nonactive'}" on:click="{() => (currentProject = 0)}">01</button>
+		<button class="{currentProject == 1 ? 'active' : 'nonactive'}" on:click="{() => (currentProject = 1)}">02</button>
+		<button class="{currentProject == 2 ? 'active' : 'nonactive'}" on:click="{() => (currentProject = 2)}">03</button>
+		<button class="{currentProject == 3 ? 'active' : 'nonactive'}" on:click="{() => (currentProject = 3)}">04</button>
 	</div>
 </section>
 
@@ -114,7 +114,7 @@
 			background-color: white;
 			border: 1px solid white;
 
-			&#active {
+			&.active {
 				background-color: var(--darkBlue);
 				color: white;
 				pointer-events: none;
