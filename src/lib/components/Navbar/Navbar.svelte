@@ -149,7 +149,7 @@
 			position: relative;
 
 			& span {
-				visibility: hidden;
+				opacity: 0;
 				position: absolute;
 			}
 
