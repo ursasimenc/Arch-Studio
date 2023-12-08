@@ -5,7 +5,7 @@
 	export let number = "";
 </script>
 
-<div id="card" class="{classes}">
+<div class="card {classes}">
 	<div class="wrapper">
 		{#if number !== ""}
 			<div class="number">{number}</div>
@@ -22,7 +22,7 @@
 </div>
 
 <style>
-	#card {
+	.card {
 		width: 350px;
 		height: 560px;
 		background-repeat: no-repeat;
