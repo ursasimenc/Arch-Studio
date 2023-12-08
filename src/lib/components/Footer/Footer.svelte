@@ -33,6 +33,7 @@
 		height: 12.5rem;
 		max-width: var(--maxWidth);
 		margin-top: 12.5rem;
+		margin-bottom: 5rem;
 
 		@media (max-width: 1050px) {
 			height: 9rem;
