@@ -97,6 +97,18 @@
 		}
 	}
 
+	h2 {
+		font-size: 6rem;
+
+		@media (max-width: 1050px) {
+			font-size: 5rem;
+		}
+
+		@media (max-width: 573px) {
+			font-size: 4rem;
+		}
+	}
+
 	.controls {
 		position: absolute;
 		display: flex;
